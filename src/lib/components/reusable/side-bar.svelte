@@ -10,6 +10,7 @@
 	import LogoText from './logo-text.svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { onMount } from 'svelte';
+	import { toggleMode } from 'mode-watcher';
 
 	let settingsIcon: HTMLElement;
 
@@ -30,7 +31,7 @@
 	});
 </script>
 
-<aside class="w-sidebar fixed flex h-screen flex-col items-center text-center">
+<aside class="fixed flex h-screen w-sidebar flex-col items-center text-center">
 	<LogoText class="absolute top-2" />
 	<div class="flex__gap__md absolute top-1/2 flex -translate-y-1/2 flex-col">
 		<a href="/">
@@ -73,7 +74,10 @@
 			<DropdownMenu.Content class="w-56">
 				<DropdownMenu.Label>Settings</DropdownMenu.Label>
 				<DropdownMenu.Separator />
-				<p>Hello world!</p>
+				<div class="flex flex-col gap-4">
+					<p>Toggle theme</p>
+					<Button onclick={toggleMode}>Toggle</Button>
+				</div>
 			</DropdownMenu.Content>
 		</DropdownMenu.Root>
 	</div>
