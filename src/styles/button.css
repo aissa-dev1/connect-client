@@ -1,0 +1,13 @@
+.link__button {
+	padding: 1.5rem !important;
+
+	&:active {
+		transform: scale(0.9);
+	}
+}
+
+.button__as__element {
+	background-color: transparent !important;
+	color: var(--foreground) !important;
+	padding: 0 !important;
+}

@@ -1,0 +1,19 @@
+.flex__gap__sm {
+	gap: 0.5rem;
+}
+
+.flex__gap__md {
+	gap: 1rem;
+}
+
+.flex__gap__lg {
+	gap: 1.5rem;
+}
+
+.flex__gap__xl {
+	gap: 2rem;
+}
+
+.flex__gap__2xl {
+	gap: 3rem;
+}
