@@ -6,6 +6,6 @@
 <main>
 	<SideBar />
 	<PageContent>
-		<p>Hello Search</p>
+		<h3 class="page__content__title">Search</h3>
 	</PageContent>
 </main>

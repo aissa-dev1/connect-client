@@ -6,6 +6,6 @@
 <main>
 	<SideBar />
 	<PageContent>
-		<p>Hello Notifications</p>
+		<h3 class="page__content__title">Notifications</h3>
 	</PageContent>
 </main>
