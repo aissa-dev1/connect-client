@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ChatCard from '$lib/components/chat/chat-card.svelte';
 	import PageContent from '$lib/components/reusable/page-content.svelte';
 	import SideBar from '$lib/components/reusable/side-bar.svelte';

@@ -38,6 +38,7 @@
 		--radius: 0.5rem;
 
 		--sidebar-width: 100px;
+		--chat-header-height: 75px;
 	}
 
 	.dark {
@@ -77,6 +78,6 @@
 		@apply border-border;
 	}
 	body {
-		@apply text-foreground bg-background;
+		@apply bg-background text-foreground;
 	}
 }
