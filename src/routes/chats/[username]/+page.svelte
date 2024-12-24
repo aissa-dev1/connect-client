@@ -3,6 +3,8 @@
 	import Input from '$lib/components/ui/input/input.svelte';
 	import { onMount } from 'svelte';
 
+	let message = $state('');
+
 	onMount(() => {
 		const chatCard = document.getElementById('chat_card')!;
 
@@ -43,6 +45,9 @@
 		</div>
 	</div>
 	<div class="fixed bottom-0 left-1/2 w-full -translate-x-1/2 bg-background sm:w-3/4 lg:w-1/2">
-		<Input type="text" placeholder="Type a message" class="rounded-none" />
+		<Input type="text" placeholder="Type a message" class="rounded-none" bind:value={message} />
+		{#if message.length > 0}
+			<Button class="absolute right-0 top-0">Send</Button>
+		{/if}
 	</div>
 </main>
