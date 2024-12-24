@@ -7,7 +7,7 @@
 
 <section
 	class={cn(
-		'absolute left-1/2 top-8 inline-block w-full -translate-x-1/2 rounded-none bg-card p-8 text-card-foreground shadow-md dark:shadow-none sm:w-3/4 sm:rounded-2xl lg:w-1/2',
+		'absolute left-1/2 top-0 inline-block w-full -translate-x-1/2 rounded-none bg-card p-8 text-card-foreground shadow-md dark:shadow-none sm:top-8 sm:w-3/4 sm:rounded-2xl lg:w-1/2',
 		className
 	)}
 	{...rest}

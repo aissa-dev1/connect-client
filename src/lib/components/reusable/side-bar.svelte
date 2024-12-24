@@ -31,7 +31,7 @@
 	});
 </script>
 
-<aside class="fixed flex h-screen w-sidebar flex-col items-center text-center">
+<aside class="fixed hidden h-screen w-sidebar flex-col items-center text-center md:flex">
 	<LogoText class="absolute top-2" />
 	<div class="flex__gap__md absolute top-1/2 flex -translate-y-1/2 flex-col">
 		<a href="/">

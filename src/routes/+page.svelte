@@ -1,12 +1,14 @@
 <script lang="ts">
 	import ChatCard from '$lib/components/chat/chat-card.svelte';
 	import PageContent from '$lib/components/reusable/page-content.svelte';
+	import PhoneNavBar from '$lib/components/reusable/phone-nav-bar.svelte';
 	import SideBar from '$lib/components/reusable/side-bar.svelte';
 	import Input from '$lib/components/ui/input/input.svelte';
 </script>
 
 <main>
 	<SideBar />
+	<PhoneNavBar />
 	<PageContent>
 		<div class="flex flex-col gap-2">
 			<h3 class="page__content__title">Chats</h3>
