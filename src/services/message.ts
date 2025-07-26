@@ -1,0 +1,3 @@
+class MessageService {}
+
+export { MessageService };
