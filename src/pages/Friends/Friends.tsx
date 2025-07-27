@@ -41,6 +41,7 @@ function Friends() {
             {(user) => (
               <div>
                 <p>{user.username}</p>
+                <A href={`/c/${user.username}`}>Chat</A>
                 <A href={`/u/${user.username}`}>Profile</A>
                 <button onClick={() => handleRemoveFriend(user.id)}>
                   Remove friend

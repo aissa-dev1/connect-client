@@ -11,7 +11,7 @@ import { User } from "./pages/User";
 import { UserProvider } from "./contexts/user";
 import { Requests } from "./pages/Requests";
 import { ProfileProvider } from "./providers/ProfileProvider";
-import { Chat } from "./pages/chat";
+import { Chat } from "./pages/Chat";
 import { Blocks } from "./pages/Blocks";
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Route path="/requests" component={Requests} />
           <Route path="/blocks" component={Blocks} />
           <Route path="/u/:username" component={User} />
-          <Route path="/chat" component={Chat} />
+          <Route path="/c/:username" component={Chat} />
           <Route path="*" component={() => <Navigate href="/" />} />
         </Router>
       </ProfileProvider>

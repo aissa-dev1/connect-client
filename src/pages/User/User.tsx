@@ -29,7 +29,7 @@ function User() {
   });
   const userResourceData = () => userResource()?.data;
 
-  const [blockResource, { refetch: refetchBlockResource }] = createResource(
+  const [blocksResource, { refetch: refetchBlocksResource }] = createResource(
     () => {
       const currentUserId = user()?.id;
       const otherUserId = userResourceData()?.id;
@@ -89,7 +89,7 @@ function User() {
     try {
       await block(userResourceData()?.id!);
       refetchFriendshipResource();
-      refetchBlockResource();
+      refetchBlocksResource();
     } catch (error) {
       console.log("Failed to block user: ", error);
     }
@@ -99,7 +99,7 @@ function User() {
     try {
       await unblock(userResourceData()?.id!);
       refetchFriendshipResource();
-      refetchBlockResource();
+      refetchBlocksResource();
     } catch (error) {
       console.log("Failed to unblock user: ", error);
     }
@@ -113,7 +113,7 @@ function User() {
             !isUserLoading() &&
             !userResource.loading &&
             !friendshipResource.loading &&
-            !blockResource.loading
+            !blocksResource.loading
           }
           fallback={<p>Loading...</p>}
         >
@@ -131,7 +131,7 @@ function User() {
               when={userResourceData()?.id !== user()?.id}
               fallback={<button>Edit profile</button>}
             >
-              <Show when={blockResource()?.data.length === 0}>
+              <Show when={blocksResource()?.data.length === 0}>
                 <Show when={!friendshipStatus()}>
                   <button onClick={handleAddFriend}>Add friend</button>
                 </Show>
@@ -150,11 +150,12 @@ function User() {
                 </Show>
                 <Show when={friendshipStatus() === FriendshipStatus.Accepted}>
                   <p>Friends</p>
+                  <A href={`/c/${userResourceData()?.username}`}>Chat</A>
                   <button onClick={handleRemoveFriend}>Remove friend</button>
                 </Show>
               </Show>
               <Show
-                when={blockResource()?.data.some(
+                when={blocksResource()?.data.some(
                   (b) => b.blockerId === user()?.id
                 )}
                 fallback={<button onClick={handleBlockUser}>Block</button>}
